@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scene/gameScene.unity
+- path: Assets/_Scene/MoveSprite2D.unity
   isLoaded: 1
   isActive: 1
