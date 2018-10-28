@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour {
         Debug.Log("Player has died.\n");
         // */
 
-        SceneManager.LoadScene("gameScene");
+        SceneManager.LoadScene("gameSceneRC");
         yield return null;
     }
 }
