@@ -8,6 +8,7 @@ public class Player_Move_Prot : MonoBehaviour {
     private bool facingRight = true; // True == Right, False == Left
     public int playerJumpPower = 1250;
     private float moveX;
+    public bool isGrounded;
 
     // Bullet
     public GameObject projectile;
@@ -27,7 +28,7 @@ public class Player_Move_Prot : MonoBehaviour {
             FireOrb();
         }
         // Animations
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             Jump();
         }
@@ -48,6 +49,8 @@ public class Player_Move_Prot : MonoBehaviour {
     {
         // Jump
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
+        isGrounded = false;
+
     }
 
     void FlipPlayer ()
@@ -78,5 +81,13 @@ public class Player_Move_Prot : MonoBehaviour {
 
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 0.5f);
+    }
+
+    // Could also use a ray technique
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log("Player has collided with " + collision.collider.name);
+        if (collision.gameObject.tag == "Ground")
+            isGrounded = true;
     }
 }

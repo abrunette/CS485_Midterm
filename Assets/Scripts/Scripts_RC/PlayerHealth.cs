@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
-    public int health;
-    public bool hasDied;
+    //public int health;
+    //public bool hasDied;
 
 	// Use this for initialization
 	void Start () {
-        hasDied = false;
+        //hasDied = false;
 	}
 	
     void Update () {
-		if (gameObject.transform.transform.position.y < -5)
+        /*
+        if (gameObject.transform.transform.position.y < -5)
         {
             hasDied = true;
         }
@@ -22,9 +23,17 @@ public class PlayerHealth : MonoBehaviour {
         {
             StartCoroutine("Die");
         }
+        */
+        if (gameObject.transform.transform.position.y < -5)
+            Die();
 	}
 
-    IEnumerator Die()
+    void Die()
+    {
+        Debug.Log("Player has died.\n");
+        SceneManager.LoadScene("gameSceneRC");
+    }
+    IEnumerator PlayerDie()
     {
         /*
         Debug.Log("Player has fallen.\n");
