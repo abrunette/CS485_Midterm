@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{14DE95BB-E8E8-544A-E239-9AA0C2DDB9E8}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SceneChange.cs">
+    <Files>
+      <File FileName="Assets/MainMenu.cs" Line="21" Column="1" />
+      <File FileName="../roll-a-ball-project/Assets/Scripts/MainMenu.cs" Line="4" Column="1" />
+      <File FileName="../roll-a-ball-project/Assets/Scripts/SceneChange.cs" Line="21" Column="1" />
+      <File FileName="Assets/SceneChange.cs" Line="7" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
