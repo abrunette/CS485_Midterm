@@ -55,6 +55,8 @@
   <ItemGroup>
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\SceneChange.cs" />
+     <Compile Include="Assets\Scripts\PhysicsObject.cs" />
+     <Compile Include="Assets\Scripts\PlayerPlatformerController.cs" />
      <Compile Include="Assets\Scripts\Scripts_RC\CameraSystem.cs" />
      <Compile Include="Assets\Scripts\Scripts_RC\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\Scripts_RC\OrbLogic.cs" />
