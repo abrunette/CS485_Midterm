@@ -8,8 +8,12 @@ public class PlayerScore : MonoBehaviour {
 
     public float timeLeft = 120;
     public int playerScoreCount = 0;
+    private int coinCount = 0;
+    private int coinMax = 9;
     public GameObject timeLeftUI;
     public GameObject playerScoreUI;
+    public GameObject levelCompleteText;
+    public GameObject allCoinCollectedText;
 
 	// Update is called once per frame
 	void Update () {
@@ -30,11 +34,18 @@ public class PlayerScore : MonoBehaviour {
         {
             Debug.Log("Reached end of level");
             CountScore();
+            levelCompleteText.gameObject.GetComponent<Text>().text = "Level Complete!";
         }
         if(collision.gameObject.tag == "Coin")
         {
             Debug.Log("Collected Coin");
             playerScoreCount += 10;
+            Destroy(collision.gameObject);
+            if (coinCount++ == coinMax)
+            {
+                allCoinCollectedText.gameObject.GetComponent<Text>().text = "All Coins Collected!";
+            }
+            
         }
     }
 
